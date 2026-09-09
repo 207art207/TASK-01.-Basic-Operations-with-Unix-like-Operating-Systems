@@ -225,6 +225,10 @@ ps-2.txt
 changes.txt
 ```
 
+[**Аналіз результату:**](changes.txt)
+
+Між двома знімками більшість процесів не змінилася. У першому знімку були ps (PID 63083) і tee (PID 63084), а в другому — нові екземпляри ps (PID 63095) і tee (PID 63096). Також з’явився процес localsearch-ext (PID 63085). Це показує, що склад процесів у системі змінюється навіть за короткий час.
+
 Між двома моментами часу список процесів може змінитися, оскільки:
 
 - деякі процеси завершуються;
@@ -234,7 +238,7 @@ changes.txt
 
 ### Результат
 
-![Task D](images/task-2d.png)
+[![Task D](images/task-2d.png)](changes.txt)
 
 ---
 
@@ -400,7 +404,7 @@ awk '{print $2}' <(tail -n +2 ps-1.txt) <(tail -n +2 ps-2.txt) | sort -u | tee p
 ```text
 .
 ├── README.md
-├── script.sh
+├── PT-1-v2.sh
 ├── ps-1.txt
 ├── ps-2.txt
 ├── top.txt
@@ -408,6 +412,7 @@ awk '{print $2}' <(tail -n +2 ps-1.txt) <(tail -n +2 ps-2.txt) | sort -u | tee p
 ├── pipelines.txt
 └── images/
     ├── task-0.png
+    ├── task-2.png
     ├── task-2a.png
     ├── task-2b.png
     ├── task-2c.png
