@@ -1,0 +1,9 @@
+art207
+avahi
+colord
+dbus
+ollama
+polkitd
+root
+rtkit
+systemd+
